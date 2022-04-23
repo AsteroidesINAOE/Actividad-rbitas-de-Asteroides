@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# Órbita de un Asteroide
 
-You can use the [editor on GitHub](https://github.com/AsteroidesINAOE/Actividad-rbitas-de-Asteroides/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Los asteroides, al igual que otros objetos del Sistema Solar, orbitan alrededor del Sol, algunos más cerca que otros. La forma que tiene la órbita de un asteroide es la de un elipse. Esta elipse se caracteriza por dos cantidades principales, llamadas **eje mayor** y **eje menor**. El eje mayor es la distancia **más grande** que hay entre dos puntos opuestos de la elipse. Por otra parte, el eje menor es la **menor distancia** que hay entre dos puntos opuestos de la elipse. Normalmente, se trabaja con la mitad de estas cantidades, es decir, es más usado el término **semieje mayor** para referirse a la mitad del eje mayor, y **semieje menor** para referirse a la mitad del eje menor. Estas cantidades se denotan por las letras *a* y *b* respectivamente.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![](elipse.png)
 
-### Markdown
+Ahora que ya está relacionado con los conceptos del semieje mayor a y el semieje menor b, podemos usar esta información para determinar las orbitas de los asteroides. Una unidad comúnmente usada para dar el tamaño de un semieje es la **Unidad Astronómica** (AU por sus siglas en inglés). Una unidad astronómica es la distancia media entre la Tierra y el Sol, y es igual a
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1AU=149 597 870 700 m.
 
-```markdown
-Syntax highlighted code block
+Además del semieje, hay otras dos cantidades importantes que tomar en cuenta. Recordando, un elipse tiene dos focos. En el caso de las orbitas, uno de los focos es el Sol. Así, cuando el objeto está más cerca del Sol, la distancia del asteroide al Sol se llama **perihelio** y se denota por la letra *q*. Cuando está lo más lejos del Sol en su órbita, este punto se llama **afelio** y se denota por la letra *Q*.
 
-# Header 1
-## Header 2
-### Header 3
+Dependiendo cuantas unidades astronómicas mida el semieje mayor de la órbita de un asteroide, puede clasificarse dentro de un grupo orbital. Estos grupos se muestran en la siguiente tabla:
 
-- Bulleted
-- List
+| **Grupo** | **Semieje mayor *a* ** |
+| ----------- | ----------- |
+| Objetos trans-neptunianos (TNO's) | a > 29 AU |
+| Centauros | 5.5 AU < a <29 AU |
+| Troyanos | 3.3 AU < a < 5.5 AU |
+| Asteroides del Cintrurón Principal| 2.1 AU < a < 3.3 AU |
+| Asteroides Cercanos a la Tierra (NEA's) | a < 1 AU |
 
-1. Numbered
-2. List
+Los NEA's también se caracterizan por tener una distancia perihélica q < 1.3 AU. Por su importancia, los NEA's se clasifican a su vez en familias en base a su perihelio q o afelio Q. En la siguiente tabla se muestran las distintas familias y sus características orbitales:
 
-**Bold** and _Italic_ and `Code` text
+| **Familia** | **Características** |
+| ----------- | ----------- |
+| Atira | Q < 0.983 AU |
+| Atenas | Q > 0.983 AU |
+| Apolo | q < 1.017 AU |
+| Amor | 1.017 AU < q < 1.3 AU |
 
-[Link](url) and ![Image](src)
-```
+Hay otra familia de asteroides muy importantes dentro del grupo de los NEA's, y es llamado **Asteroides Potencialmente Peligrosos (PHA's)**. Estos asteroides se caracterizan porque la *Distancia Mínima de Intersección de la Órbita* con la Tierra es de 0.05 AU o menor, y porque tienen una **magnitud absoluta** (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Ahora que ya conoces sobre las órbitas de los asteroides, ¿te gustaría identificar a qué grupo y/o familia pertenecen? Si es así, te invitamos a revisar la siguiente actividad. 
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AsteroidesINAOE/Actividad-rbitas-de-Asteroides/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
