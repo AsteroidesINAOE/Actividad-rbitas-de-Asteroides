@@ -1,40 +1,285 @@
-# Órbita de un Asteroide
+<html>
+<head>
+  <title>Asteroides Cercanos a la Tierra (NEA's)</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  
+<style type="text/css">
+    * {
+      margin:0px;
+      font-family:Raleway;
+    }
+	  
+    .container1{
+	    display:flex;
+	    flex-flow:column;
+	  }
+	  
+    .container2{
+	    display:flex;
+	    flex-flow:row;
+	  }
+	 
+    a {
+      color:#0099FF;
+    }
+	  
+    .capa {
+	    background:black;
+	    height:40px;
+	    position:relative;
+	    padding:0;
+    }
 
-Los asteroides, al igual que otros objetos del Sistema Solar, orbitan alrededor del Sol, algunos más cerca que otros. La forma que tiene la órbita de un asteroide es la de un elipse. Esta elipse se caracteriza por dos cantidades principales, llamadas **eje mayor** y **eje menor**. El eje mayor es la distancia **más grande** que hay entre dos puntos opuestos de la elipse. Por otra parte, el eje menor es la **menor distancia** que hay entre dos puntos opuestos de la elipse. Normalmente, se trabaja con la mitad de estas cantidades, es decir, es más usado el término **semieje mayor** para referirse a la mitad del eje mayor, y **semieje menor** para referirse a la mitad del eje menor. Estas cantidades se denotan por las letras *a* y *b* respectivamente.
+    p {
+      padding:0px 0px 0px 30px;
+    }
+    
+    h2 {
+      text-align:center;
+      padding:0px 0px 0px 30px;	
+      font-size:40px;
+    }
+    
+    h3 {
+      padding:0px 0px 0px 30px;
+      font-size:20px;
+    }
+	  
+    h4 {
+      padding:0px 0px 0px 30px;
+      font-size:16px;
+    }   
+    
+    body {
+      background-color: black;
+    }
+        
+    ul.listas, ol {
+      font-family:Raleway;
+      padding:0px 0px 0px 30px;
+    }
+	  
+    ol ol {
+      font-family:Raleway;
+      padding:0px 0px 0px 30px;
+    }
+    
+    #header_wrap {
+      padding:0px;
+      margin:0px;
+    }
+    
+    #header_wrap2 {
+      padding:30px 0px 0px;
+      margin:0px;
+    }
+    
+    #header {
+      padding:0px 0px 30px 0px;
+      margin:auto;
+      height:12px;
+      width:100%;
+      font-family:Raleway;
+      font-size:18px;
+      position: sticky;
+      top:0px;
+      background:#02284A;
+      z-index:3;
+    }
+    
+    ul.nav, .nav li {
+      list-style:none;
+    }
+    
+    .nav li a {
+        background-color:#02284A;
+        color:white;
+        text-decoration:none;
+        padding:10px 15px;
+        display:block;
+    }
+    
+    .nav li a:hover {
+      background-color:#021C34;
+    }
+    
+    .nav > li {
+      float:left;
+    }
+    
+    .nav li ul {
+      display:none;
+      position:absolute;
+      min-width:140px;
+      min-height:80;
+    }
+    
+    .nav li:hover > ul {
+    display:block;
+    }
+  
+    .indice {
+	background:#54ABFA;
+	margin:50px 10px 0 10px;
+	width:35%;
+	height:100%;
+	padding:20px 60px 20px 20px;
+  	border-radius:3px;
+	position:sticky;
+	top:55px;
+	z-index:2;
+	display:block;
+    }
+	  
+    a.contenido{
+	color:black;
+    }
+	  
+    .indice .indice_titulo {
+	font-size:20px;
+	color:black;
+	padding:0 0 0 10px;
+    }	
+	  
+    .indice .indice_lista{
+	  padding:0 0 0 30px;  
+	  }
+	
+  </style>  
+	
+	
+</head>
+<body>
 
-![](elipse.png)
-
-Ahora que ya está relacionado con los conceptos del semieje mayor a y el semieje menor b, podemos usar esta información para determinar las orbitas de los asteroides. Una unidad comúnmente usada para dar el tamaño de un semieje es la **Unidad Astronómica** (AU por sus siglas en inglés). Una unidad astronómica es la distancia media entre la Tierra y el Sol, y es igual a
-
-1AU=149 597 870 700 m.
-
-Además del semieje, hay otras dos cantidades importantes que tomar en cuenta. Recordando, un elipse tiene dos focos. En el caso de las orbitas, uno de los focos es el Sol. Así, cuando el objeto está más cerca del Sol, la distancia del asteroide al Sol se llama **perihelio** y se denota por la letra *q*. Cuando está lo más lejos del Sol en su órbita, este punto se llama **afelio** y se denota por la letra *Q*.
-
-Dependiendo cuantas unidades astronómicas mida el semieje mayor de la órbita de un asteroide, puede clasificarse dentro de un grupo orbital. Estos grupos se muestran en la siguiente tabla:
-
-| **Grupo** | **Semieje mayor *a* ** |
-| ----------- | ----------- |
-| Objetos trans-neptunianos (TNO's) | a > 29 AU |
-| Centauros | 5.5 AU < a <29 AU |
-| Troyanos | 3.3 AU < a < 5.5 AU |
-| Asteroides del Cintrurón Principal| 2.1 AU < a < 3.3 AU |
-| Asteroides Cercanos a la Tierra (NEA's) | a < 1 AU |
-
-Los NEA's también se caracterizan por tener una distancia perihélica q < 1.3 AU. Por su importancia, los NEA's se clasifican a su vez en familias en base a su perihelio q o afelio Q. En la siguiente tabla se muestran las distintas familias y sus características orbitales:
-
-| **Familia** | **Características** |
-| ----------- | ----------- |
-| Atira | Q < 0.983 AU |
-| Atenas | Q > 0.983 AU |
-| Apolo | q < 1.017 AU |
-| Amor | 1.017 AU < q < 1.3 AU |
-
-Hay otra familia de asteroides muy importantes dentro del grupo de los NEA's, y es llamado **Asteroides Potencialmente Peligrosos (PHA's)**. Estos asteroides se caracterizan porque la *Distancia Mínima de Intersección de la Órbita* con la Tierra es de 0.05 AU o menor, y porque tienen una **magnitud absoluta** (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.
-
-Ahora que ya conoces sobre las órbitas de los asteroides, ¿te gustaría identificar a qué grupo y/o familia pertenecen? Si es así, te invitamos a revisar la siguiente actividad. 
+  <div id="header_wrap" class"outer">
+    <header clas="inner">
+      <h1 id="project_tittle">
+        <p style="background:black; color:#066DCC; font-weight:bold; padding:25px; text-align:center; font-size:60px; font-family:Raleway">Asteroides Cercanos a la Tierra (NEA's)</p>
+      </h1>
+  </div>
+  <hr color="#02284A" size=3>
+<div class="container1">
+  <div id="header">
+    <ul class="nav">
+      <li><a href="https://asteroidesinaoe.github.io/">Inicio</a></li>
+      <li><a href="https://asteroidesinaoe.github.io/Actividades/">Actividades</a>
+        <ul>
+          <li><a href="https://asteroidesinaoe.github.io/Actividad-Curva-de-Luz/">Curva de Luz de un Asteroide</a></li>
+          <li><a href="https://asteroidesinaoe.github.io/Actividad-rbitas-de-Asteroides/">Órbitas de los Asteroide</a></li>
+        </ul>
+      </li>
+      <li><a href="https://asteroidesinaoe.github.io/Actividades/">Aprender más</a>
+        <ul>
+          <li><a href="https://asteroidesinaoe.github.io/Actividad-Curva-de-Luz/">Curva de Luz de un Asteroide</a></li>
+        </ul>
+      </li>
+      <li><a href="https://asteroidesinaoe.github.io/">Glosario</a></li>
+      <li><a href="https://asteroidesinaoe.github.io/">Contacto</a></li>
+    </ul>
+  </div>
 
 
+<div class="container2">
+<div class="indice">
+	<h1 class="indice_titulo"><b>Contenido</b></h1>
+	<ul class="indice_lista">
+		<li><a class="contenido" href="#actv1" target="_top">Sección 1</a></li>
+		<li><a class="contenido" href="#actv2" target="_top">Sección 2</a></li>
+	</ul>
+		
+</div>	  
+
+
+<font color="white">
+<div class="capa"><a name="indice1"></a></div>
+<h2>Órbita de un Asteroide<br><br></h2>
+  <p>
+    Los asteroides, al igual que otros objetos del Sistema Solar, orbitan alrededor del Sol, algunos más cerca que otros. La forma que tiene la órbita de un asteroide es la de un elipse. Esta elipse se caracteriza por dos cantidades principales, llamadas <b>eje mayor</b> y <b>eje menor</b>. El eje mayor es la distancia <b>más grande</> que hay entre dos puntos opuestos de la elipse. Por otra parte, el eje menor es la <b>menor distancia</b> que hay entre dos puntos opuestos de la elipse. Normalmente, se trabaja con la mitad de estas cantidades, es decir, es más usado el término <b>semieje mayor</b> para referirse a la mitad del eje mayor, y <b>semieje menor</b> para referirse a la mitad del eje menor. Estas cantidades se denotan por las letras <i>a</i> y <i>b</i> respectivamente. <br><br>
+  <img="elipse.png"><br><br>
+  Ahora que ya está relacionado con los conceptos del semieje mayor a y el semieje menor b, podemos usar esta información para determinar las orbitas de los asteroides. Una unidad comúnmente usada para dar el tamaño de un semieje es la <b>Unidad Astronómica</b> (AU por sus siglas en inglés). Una unidad astronómica es la distancia media entre la Tierra y el Sol, y es igual a<br><br>
+  1AU=149 597 870 700 m.<br><br>
+  Además del semieje, hay otras dos cantidades importantes que tomar en cuenta. Recordando, un elipse tiene dos focos. En el caso de las orbitas, uno de los focos es el Sol. Así, cuando el objeto está más cerca del Sol, la distancia del asteroide al Sol se llama <b>perihelio</b> y se denota por la letra <i>q</i>. Cuando está lo más lejos del Sol en su órbita, este punto se llama <b>afelio</b> y se denota por la letra <i>Q</i>.
+  Dependiendo cuantas unidades astronómicas mida el semieje mayor de la órbita de un asteroide, puede clasificarse dentro de un grupo orbital. Estos grupos se muestran en la siguiente tabla:
+  </p>
+ <table border="1">
+  <caption>Grupos de asteroides por su orbita</caption>
+  <tbody>
+    <tr>
+      <th><p><b>Grupo</b></p></th>
+      <th><p><b>Semieje mayor <i>a</i></b></p></th>
+    </tr>
+    <tr>
+      <td><p>Objetos trans-neptunianos (TNO's)</p></td>
+      <td><p>a > 29 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Centauros</p></td>
+      <td><p>5.5 AU < a <29 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Troyanos</p></td>
+      <td><p>3.3 AU < a < 5.5 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Asteroides del Cintruón Principal (MBA's)</p></td>
+      <td><p>2.1 AU < a < 3.3 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Asteroides Cercanos a la Tierra (NEA's)</p></td>
+      <td><p>a < 1 AU</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  <p>
+    Los NEA's también se caracterizan por tener una distancia perihélica q < 1.3 AU. Por su importancia, los NEA&#39;s se clasifican a su vez en familias en base a su perihelio q o afelio Q. En la siguiente tabla se muestran las distintas familias y sus características orbitales:
+ </p>
+  
+<table border="1">
+  <caption>Grupos de asteroides por su orbita</caption>
+  <tbody>
+    <tr>
+      <th><p><b>Familia</b></p></th>
+      <th><p><b>Características</b></p></th>
+    </tr>
+    <tr>
+      <td><p>Atira</p></td>
+      <td><p>Q < 0.983 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Atenas</p></td>
+      <td><p>Q > 0.983 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Apolo</p></td>
+      <td><p>q < 1.017 AU</p></td>
+    </tr>
+    <tr>
+      <td><p>Amor</p></td>
+      <td><p>1.017 AU < q < 1.3 AU</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  <p>
+    Hay otra familia de asteroides muy importantes dentro del grupo de los NEA's, y es llamado <b>Asteroides Potencialmente Peligrosos (PHA's)</b>. Estos asteroides se caracterizan porque la <i>Distancia Mínima de Intersección de la Órbita</i> con la Tierra es de 0.05 AU o menor, y porque tienen una <b>magnitud absoluta</b> (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.<br><br>
+    Ahora que ya conoces sobre las órbitas de los asteroides, ¿te gustaría identificar a qué grupo y/o familia pertenecen? Si es así, te invitamos a revisar la siguiente actividad.<br><br>
+  </p>
+      
+  
+</font>   
+</div>
+</div>
 
 
 
 
+<div id="header_wrap2" class"outer">
+    <header clas="inner">
+        <p style="background:black; color:white; padding:25px; text-align:center; font-size:15px">Realizado por el grupo de trabajo BUAP-INAOE del programa Asteroides Cercanos a la Tiera (NEA's)</p>
+</div>    
+     
+</body>
+</html>
+
+ 
