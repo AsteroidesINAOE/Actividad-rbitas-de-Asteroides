@@ -178,11 +178,7 @@
 	}
 	
 	function cambiarImagen() {
-		var imagen=Math.floor(Math.random() * imagenes.length);
-		var image='<img src="';
-		image += imagenes[imagen];
-		image += '" width="600" height="400”/><br><br>'
-		return image;
+		document.write(getimage());
 	}
 	
 </script>	
