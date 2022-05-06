@@ -165,22 +165,17 @@
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	function imagen_aleatoria() {
-		var imagen=Math.floor(Math.random() * imagenes.length);
-		var image='<img id="ia" src="';
-		image += imagenes[imagen];
-		image += '" width="600" height="400”/><br><br>'
-		return image;
+		var num_al=Math.floor(Math.random() * imagenes.length);
+		var imagen=imagenes[num_al];
+		document.getElementById("ia").src = imagen();
 	}
-	
-	function cambiar(){
-     		document.getElementById("ia").src = imagen_aleatoria();
-	}
+
 </script>	
 	
 	
 	
 </head>
-<body>
+<body onload="imagen_aleatoria()">
 
   <div id="header_wrap" class"outer">
     <header clas="inner">
@@ -308,9 +303,7 @@
 	<div class="preguntas">
     		<button type="button" onclick="cambiar()">Intentar con un asteroide</button>
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
-		<script>
-			document.write(imagen_aleatoria)
-		</script>
+		<img id="ia" src="Ceres.jpg" width="600px" height="400px">
 
 		
 	</div>
