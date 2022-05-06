@@ -167,8 +167,12 @@
 		var imagen=Math.floor(Math.random() * imagenes.length);
 		var image='<img src="';
 		image += imagenes[imagen];
-		image += '" width="40%" height="40%”/><br><br>'
+		image += '" width="600" height="400”/><br><br>'
 		return image;
+	}
+	
+	function cambiar() {
+		document.write(getimage());
 	}
 </script>	
 	
@@ -307,7 +311,7 @@
 	<script type="text/javascript">
 		document.write(getimage());
 	</script>
-	
+	<button onclick="cambiar();">Intentar con otro asteroide</button>
 	
 </div>
 	
