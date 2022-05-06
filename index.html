@@ -175,11 +175,14 @@
 		image += imagenes[imagen];
 		image += '" width="600" height="400”/><br><br>'
 		return image;
-
 	}
 	
 	function cambiarImagen() {
-		
+		var imagen=Math.floor(Math.random() * imagenes.length);
+		var image='<img src="';
+		image += imagenes[imagen];
+		image += '" width="600" height="400”/><br><br>'
+		return image;
 	}
 	
 </script>	
@@ -315,7 +318,7 @@
 	
 	
 <div class="preguntas">
-	<button id="boton" type="button">Cambiar imagen</button>
+	<button onclick="cambiarImagen();">Intentar con otro asteroide</button>
 	<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el siguiente asteroide?</h3>
 	<script>
 		document.write(getimage());
