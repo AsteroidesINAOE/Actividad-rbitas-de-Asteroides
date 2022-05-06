@@ -291,17 +291,13 @@
 	<div class="preguntas">
 		<img>
     		<button onclick="imagenAleatoria()">Intentar con un asteroide</button>
-		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el siguiente asteroide?</h3>
+		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
 		<script>
-			var imagenes=["Ceres.jpg","2001 CP44.jpg"];
-			function image() {
-				
-			}	
-			
+			var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 			function imagen_aleatoria {
 				var num_al=Math.floor(Math.random() * imagenes.length);
-				image += imagenes[num_al];
-				document.getElementsByTagName("img")[0].src=image;
+				image = imagenes[num_al];
+				document.getElementsByTagName("img").src=image;
 			}
 		</script>	
 		
