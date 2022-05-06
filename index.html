@@ -162,11 +162,15 @@
   </style>  
 
 <script type="text/javascript">
-	var imagenes=[Ceres.jpg,2001 CP44.jpg];
-	function getimage() {
-		var image=Math.random(len(imagenes);
-		var imagen=imagenes(image);
-		return <img src="imagen">;
+	var imagenes=["Ceres.jpg","2001 CP44.jpg"];
+	var extremo = imagenes.size();
+	function getimage(1,extremo) {
+		var numero=Math.round(Math.random() * (max - min) + min);
+		var imagen=imagenes.get(numero);
+		var image='<img src="';
+		image += imagenes[numero];
+		image += '"/>'
+		return image;
 	}
 </script>	
 	
