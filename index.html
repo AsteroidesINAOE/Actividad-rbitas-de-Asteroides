@@ -289,7 +289,6 @@
 	
 	
 	<div class="preguntas">
-		<img>
     		<button onclick="imagenAleatoria()">Intentar con un asteroide</button>
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
 		<script>
@@ -297,7 +296,7 @@
 			function imagen_aleatoria {
 				var num_al=Math.floor(Math.random() * imagenes.length);
 				image = imagenes[num_al];
-				document.getElementsByTagName("img").src=image;
+				document.write('<img src="'+image+'".jpg>')
 			}
 		</script>	
 		
