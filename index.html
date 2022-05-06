@@ -166,9 +166,7 @@
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	function imagen_aleatoria() {
 		var num_al=Math.floor(Math.random() * imagenes.length);
-		var im=imagenes[num_al];
-		imagen = '<img id="ia" src="'+im+'" width="600px" height="400px">'
-		return imagen
+		var imagen=imagenes[num_al];
 	}
 	
 	function cambiar(){
@@ -312,6 +310,7 @@
 				document.write(imagen_aleatoria)
 			</script>
 		/p>
+		<img id="ia" src=imagen width="600px" height="400px"
 		
 	</div>
 	
