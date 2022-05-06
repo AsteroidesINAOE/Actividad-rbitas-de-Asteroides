@@ -170,16 +170,18 @@
 <script type="text/javascript">
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];
 	function getimage() {
-		return imagenes[Math.floor(Math.random() * imagenes.length)];
+		var imagen=Math.floor(Math.random() * imagenes.length);
+		var image='<img src="';
+		image += imagenes[imagen];
+		image += '" width="600" height="400”/><br><br>'
+		return image;
+
 	}
 	
 	function cambiarImagen() {
-		$('#imagen').attr('src', getimage());
+		
 	}
 	
-	cambiarImagen();
-	
-	$('#boton').on('click', cambiarImagen);
 </script>	
 	
 	
@@ -316,7 +318,8 @@
 	<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el siguiente asteroide?</h3>
 	<img id="imagen" alt="Imagen aleatoria"><br/>
 	<button id="boton" type="button">Cambiar imagen</button>
-	<script src="text/javascript">
+	<script>
+		document.text/javascript(getimage());
 	</script>
 
 	
