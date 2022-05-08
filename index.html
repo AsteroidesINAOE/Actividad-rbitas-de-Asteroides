@@ -177,6 +177,10 @@
 		return imagen;
 	}
 	
+	var grupo=grupos[num_al];
+	if (grupo==id) {
+		var si="Correcto";
+	}
 	
 	function cambiar() {
 		var num_al2=Math.floor(Math.random() * imagenes.length);
@@ -326,7 +330,7 @@
 		<br><br>	
 		</p>
 		<p style="color=black;">
-		<form method="post" action="cuestionario.php">
+		<form method="post">
   			<input type="radio" id="TNO" name="cuestionario" value="TNO">
   			<label for="TNO">TNO</label><br>
   			<input type="radio" id="Centauro" name="cuestionario" value="Centauro">
@@ -339,6 +343,11 @@
   			<label for="NEA">NEA</label><br>
 			<input type="submit" value="Enviar">
 		</form>
+		</p>
+		<p>
+			<script>
+				document.write(si);
+			</script>
 		</p>
 	</div>
 
