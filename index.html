@@ -176,6 +176,14 @@
 		return imagen;
 	}
 	
+	function asignar() {
+		var grupo=grupos[num_al];
+		if (grupo==name) {
+			return "Correcto";
+		} else
+			return "Incorrecto";
+	}
+	
 	function cambiar() {
 		var num_al2=Math.floor(Math.random() * imagenes.length);
 		var imagen2=imagenes[num_al2];
@@ -324,7 +332,7 @@
 		<br><br>	
 		</p>
 		<p style="color=black;">
-		<form method="post" action="/cuestionario.php">
+		<form method="post" action="<script>document.write(asignar());</script>">
   			<input type="radio" id="TNO" name="TNO">
   			<label for="TNO">TNO</label><br>
   			<input type="radio" id="Centauro" name="Centauro">
