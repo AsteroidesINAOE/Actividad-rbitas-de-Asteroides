@@ -1,3 +1,3 @@
-<?p
+<?php
   echo "hola";  
 ?>
