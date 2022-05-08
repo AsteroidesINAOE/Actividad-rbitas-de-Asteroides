@@ -167,6 +167,7 @@
 	
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
+	var grupos=["MBA","NEA"]
 	function imagen_aleatoria() {
 		var num_al=Math.floor(Math.random() * imagenes.length);
 		var imagen='<img id="ia" src="';
@@ -323,7 +324,7 @@
 		<br><br>	
 		</p>
 		<p style="color=black;">
-		<form method="post" method="cuestionario.php>
+		<form method="post">
   			<input type="radio" id="TNO" name="TNO">
   			<label for="TNO">TNO</label><br>
   			<input type="radio" id="Centauro" name="Centauro">
@@ -336,14 +337,14 @@
   			<label for="NEA">NEA</label><br>
 			<input type="submit" value="Enviar">
 		</form>
+					   
 		</p>
 	</div>
-<?php>
+	
+<?php
 	$PHPvariable = “<script> document.write(num_al) </script>”;
 	echo “PHPvariable = “.$PHPvariable;
-</?>
-	
-	
+?>	
 	
 	
 	
