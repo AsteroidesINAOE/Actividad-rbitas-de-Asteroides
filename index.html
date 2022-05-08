@@ -170,6 +170,8 @@
 	}
 	
   </style>  
+
+<script src="http://code.jquery.com/jquery.js"></script>
 	
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
@@ -182,6 +184,15 @@
 		var grupo=grupos[num_al];
 		return imagen;
 	}
+	
+	function comprobar() {
+		var respuesta =$("input[type=radio]:checked").val();
+		if (respuesta==grupo){
+			alert("Respuesta correcta");
+		}else{
+			alert("Intentalo de nuevo");
+		}
+		
 	
 	function cambiar() {
 		var num_al2=Math.floor(Math.random() * imagenes.length);
@@ -332,11 +343,11 @@
 		</script>	
 		</p>
 		<p style="color=black;font-family=Raleway"> <br><br>
-			<input type="radio" value="TNO"><label>TNO</label><br>
-			<input type="radio" value="Centauro"><label>Centauro</label><br>
-			<input type="radio" value="Troyano"><label>Troyano</label><br>
-			<input type="radio" value="MBA"><label>MBA</label><br>
-			<input type="radio" value="NEA"><label>NEA</label><br>
+			<input type="radio" value="TNO" name="cuestionario"><label>TNO</label><br>
+			<input type="radio" value="Centauro" name="cuestionario"><label>Centauro</label><br>
+			<input type="radio" value="Troyano" name="cuestionario"><label>Troyano</label><br>
+			<input type="radio" value="MBA" name="cuestionario"><label>MBA</label><br>
+			<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
 			<input type="button" value="Comprobar" onclick="comprobar()">
 		</p>
 	</div>
