@@ -186,21 +186,19 @@
 		return imagen;
 	}
 	
-	function comprobar() {
-		var respuesta=$("input[type=radio]:checked").val();
-		if (respuesta==grupo) {
-			alert("Respuesta correcta");
-		}else 
-			alert("Respuesta incorrecta);
-	
 	function cambiar() {
 		var num_al2=Math.floor(Math.random() * imagenes.length);
 		var imagen2=imagenes[num_al2];
 		document.getElementById("ia").src = imagen2;
 	}
 	
-	
-	
+	function comprobar() {
+		var respuesta=$("input[type=radio]:checked").val();
+		if (respuesta==grupo) {
+			alert("Respuesta correcta");
+		}else 
+			alert("Respuesta incorrecta);
+	}
 	
 </script>	
 	
