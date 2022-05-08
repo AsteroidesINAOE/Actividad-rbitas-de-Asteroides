@@ -327,11 +327,12 @@
 		</script>
 		<br><br>	
 		</p>
+		<div id="respuestas"></div>
 		<script>
 			var txt_respuestas="";
 			for (i in respuestas) {
 				txt_respuestass+='<input type="radio"><label>'+respuestas[i]+'</label>';
-			print(txt_respuestas)
+			document.getElementByID("respuestas"):innerHTML=txt_respuestas;
 		</script>
 		
 	</div>
