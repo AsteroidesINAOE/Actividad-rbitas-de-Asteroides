@@ -178,8 +178,6 @@
 		return imagen;
 	}
 	
-	var respuestas=["TNO", "Centauro", "Troyano", "MBA", "NEA"]
-	
 	function cambiar() {
 		var num_al2=Math.floor(Math.random() * imagenes.length);
 		var imagen2=imagenes[num_al2];
@@ -328,12 +326,14 @@
 		<br><br>	
 		</p>
 		<script>
+			var respuestas=["TNO", "Centauro", "Troyano", "MBA", "NEA"]
 			var txt_respuestas="";
 			for (i in respuestas) {
-				txt_respuestas+='<input type="radio"><label>'+respuestas[i]+'</label>'<br>;
+				txt_respuestas+='<input type="radio"><label>'+respuestas[i]+'</label><br>';
 			}
-			document.write(txt_respuestas)
+			document.getElementById("respuestas").innerHTML=txt_respuestas;
 		</script>
+		<div id="respuestas"></id>
 	</div>
 	
 
