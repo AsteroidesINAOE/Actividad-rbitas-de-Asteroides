@@ -184,6 +184,12 @@
 		document.getElementById("ia").src = imagen2;
 	}
 	
+	var respuestas=["TNO", "Centauro", "Troyano", "MBA", "NEA"]
+	var txt_respuestas="";
+	for (i in respuestas) {
+		txt_respuestas+='<input type="radio"><label>'+respuestas[i]+'</label><br>';
+	}
+	
 	
 </script>	
 	
@@ -325,15 +331,11 @@
 		</script>
 		<br><br>	
 		</p>
+		<div id="respuestas"></id>
 		<script>
-			var respuestas=["TNO", "Centauro", "Troyano", "MBA", "NEA"]
-			var txt_respuestas="";
-			for (i in respuestas) {
-				txt_respuestas+='<input type="radio"><label>'+respuestas[i]+'</label><br>';
-			}
 			document.getElementById("respuestas").innerHTML=txt_respuestas;
 		</script>
-		<div id="respuestas"></id>
+		
 	</div>
 	
 
