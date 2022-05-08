@@ -171,7 +171,7 @@
 	
   </style>  
 	
-
+<script src="https://code.jquery.com/jquery.js"></script>
 	
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
@@ -185,9 +185,9 @@
 		return imagen;
 	}
 	
-	function comprobar() {
-		var respuesta =$("input[type=radio]:checked").val();
-		if (respuesta==grupo){
+	function comprobar(var1) {
+		var respuesta = $("input[type=radio]:checked").val();
+		if (respuesta==var1){
 			alert("Respuesta correcta");
 		}else{
 			alert("Intentalo de nuevo");
@@ -348,7 +348,7 @@
 			<input type="radio" value="Troyano" name="cuestionario"><label>Troyano</label><br>
 			<input type="radio" value="MBA" name="cuestionario"><label>MBA</label><br>
 			<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
-			<input type="button" value="Comprobar" onclick="comprobar()">
+			<input type="button" value="Comprobar" onclick="comprobar(grupo)">
 		
 	</div>
 	
