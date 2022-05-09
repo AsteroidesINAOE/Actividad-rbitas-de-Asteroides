@@ -176,12 +176,15 @@
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	var grupos=["MBA","NEA"]
-	function imagen_aleatoria() {
+	function cuestionario(){
 		var num_al=Math.floor(Math.random() * imagenes.length);
-		console.log('num_al'+num_al);
-		var imagen='<img id="ia" src="';
-		imagen += imagenes[num_al];
-		imagen += '" width="500" height="400”/><br><br>'
+		function imagen_aleatoria() {
+			var imagen='<img id="ia" src="';
+			imagen += imagenes[num_al];
+			imagen += '" width="500" height="400”/><br><br>'
+			return imagen;
+		}
+	
 		function comprobar() {
 			var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
 			var grupo=grupos[num_al];
@@ -189,12 +192,7 @@
 				alert("Respuesta correcta");
 			}else {
 				alert("Respuesta incorrecta");}
-
 		}
-		return imagen, comprobar;
-	}
-	
-	
 	
 	function cambiar() {
 		var num_al=Math.floor(Math.random() * imagenes.length);
