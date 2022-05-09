@@ -176,7 +176,12 @@
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	var grupos=["MBA","NEA"]
-	function comprobar() {
+
+	function cambiar() {
+		var num_al=Math.floor(Math.random() * imagenes.length);
+		var imagen2=imagenes[num_al];
+		document.getElementById("ia").src = imagen2;
+		function comprobar() {
 			var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
 			var grupo=grupos[num_al];
 			if (respuesta==grupo) {
@@ -184,11 +189,7 @@
 			}else {
 				alert("Respuesta incorrecta");}
 		}
-	
-	function cambiar() {
-		var num_al=Math.floor(Math.random() * imagenes.length);
-		var imagen2=imagenes[num_al];
-		document.getElementById("ia").src = imagen2;
+		return comprobar;
 	}
 	
 	
@@ -332,7 +333,7 @@
 		<input type="radio" value="Troyano" name="cuestionario"><label>Troyano</label><br>
 		<input type="radio" value="MBA" name="cuestionario"><label>MBA</label><br>
 		<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
-		<input type="button" value="Comprobar" onclick="comprobar()">
+		<input type="button" value="Comprobar" onclick="cambiar()()">
 		<p>
 		<img id="ia" src="Ceres.jpg"width="500" height="400”/><br><br>
 		</p>	
