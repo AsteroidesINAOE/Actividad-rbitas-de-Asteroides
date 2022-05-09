@@ -173,6 +173,9 @@
 		color:black;
 	}
 	
+
+
+  
   </style>  
 	
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -229,7 +232,7 @@
 <h2>Órbita de un Asteroide<br><br></h2>
   <p>
     Los asteroides, al igual que otros objetos del Sistema Solar, orbitan alrededor del Sol, algunos más cerca que otros. La forma que tiene la órbita de un asteroide es la de un elipse. Esta elipse se caracteriza por dos cantidades principales, llamadas <b>eje mayor</b> y <b>eje menor</b>. El eje mayor es la distancia <b>más grande</b> que hay entre dos puntos opuestos de la elipse. Por otra parte, el eje menor es la <b>menor distancia</b> que hay entre dos puntos opuestos de la elipse. Normalmente, se trabaja con la mitad de estas cantidades, es decir, es más usado el término <b>semieje mayor</b> para referirse a la mitad del eje mayor, y <b>semieje menor</b> para referirse a la mitad del eje menor. Estas cantidades se denotan por las letras <i>a</i> y <i>b</i> respectivamente. <br><br>
-  <img src="elipse.png"><br><br>
+  <img src="img/elipse.png"><br><br>
   Ahora que ya está relacionado con los conceptos del semieje mayor a y el semieje menor b, podemos usar esta información para determinar las orbitas de los asteroides. Una unidad comúnmente usada para dar el tamaño de un semieje es la <b>Unidad Astronómica</b> (AU por sus siglas en inglés). Una unidad astronómica es la distancia media entre la Tierra y el Sol, y es igual a<br><br>
   1AU=149 597 870 700 m.<br><br>
   Además del semieje, hay otras dos cantidades importantes que tomar en cuenta. Recordando, un elipse tiene dos focos. En el caso de las orbitas, uno de los focos es el Sol. Cuando el asteroide está lo más cerca al Sol en su órbita, la distancia que hay entre ellos se llama <b>perihelio</b> y se denota por la letra <i>q</i>. Cuando está lo más lejos del Sol en su órbita, esta distancia se llama <b>afelio</b> y se denota por la letra <i>Q</i>.<br><br>
@@ -316,7 +319,7 @@
 
 <script>
 var respuesta_correcta;
-var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
+var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg"];	
 var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
 	
 function cambiar(){	
@@ -361,13 +364,16 @@ function comprobar(){
 </div>
 </div>
 
-
-
-
-<div id="header_wrap2" class"outer">
-    <header clas="inner">
-        <p style="background:black; color:white; padding:25px; text-align:center; font-size:15px">Realizado por el grupo de trabajo BUAP-INAOE del programa Asteroides Cercanos a la Tiera (NEAs)</p>
-</div>    
+<center>
+  <div id="header_wrap2" class="outer">
+      <p style="background:black;
+        color:white; 
+        padding:25px; 
+        text-align:center; 
+        font-size:13px" >2022 - Página diseñada y desarrollada por el grupo de trabajo BUAP-INAOE del programa: Asteroides Cercanos a la Tierra (NEAs)
+        </p>
+    </div>    
+</center>   
      
 </body>
 </html>
