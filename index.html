@@ -176,19 +176,17 @@
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	var grupos=["MBA","NEA"]
-	var al=Math.floor(Math.random() * imagenes.length);
 	function imagen_aleatoria() {
-		var num_al=al;
+		var num_al=var al=Math.floor(Math.random() * imagenes.length);
 		var imagen='<img id="ia" src="';
 		imagen += imagenes[num_al];
 		imagen += '" width="500" height="400”/><br><br>'
 		return imagen;
 	}
 	
-	function comprobar() {
+	function comprobar(var1) {
 		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
-		var num_al=al;
-		var grupo=grupos[num_al];
+		var grupo=grupos[var1];
 		if (respuesta==grupo) {
 			alert("Respuesta correcta");
 		}else {
@@ -197,8 +195,8 @@
 	}
 	
 	function cambiar() {
-		var al=Math.floor(Math.random() * imagenes.length);
-		var imagen2=imagenes[al];
+		var num_al=Math.floor(Math.random() * imagenes.length);
+		var imagen2=imagenes[num_al];
 		document.getElementById("ia").src = imagen2;
 	}
 	
@@ -343,7 +341,7 @@
 		<input type="radio" value="Troyano" name="cuestionario"><label>Troyano</label><br>
 		<input type="radio" value="MBA" name="cuestionario"><label>MBA</label><br>
 		<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
-		<input type="button" value="Comprobar" onclick="comprobar()">
+		<input type="button" value="Comprobar" onclick="comprobar(num_al)">
 		<p>
 		<script>
 			document.write(imagen_aleatoria());
