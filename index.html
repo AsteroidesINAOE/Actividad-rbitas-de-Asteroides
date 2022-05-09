@@ -179,10 +179,11 @@
 	
 	var al=Math.floor(Math.random() * imagenes.length);
 	var respuestas_posibles=respuestas[al];
+	console.log(respuestas_posibles);
 	var txt_respuestas="";
 	
 	for (i in respuestas_posibles){
-		txt_respuestas='<input type="radio"><label>'+respuestas_posibles[i]+'</label><br>';
+		txt_respuestas+='<input type="radio"><label>'+respuestas_posibles[i]+'</label><br>';
 	}
 	
 	
