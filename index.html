@@ -186,6 +186,8 @@
 	}
 	
 	
+	document.getElementById("ia").src=imagenes[al];
+	document.getElementById("respuestas").innerHTML=txt_respuestas
 	
 	
 	function comprobar() {
@@ -333,17 +335,11 @@
     		<button type="button" onclick="cambiar()">Intentar con un asteroide</button>
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
 		<p id="respuestas"></p>
-		<p>
-			<script>document.getElementById("respuestas").innerHTML=txt_respuestas</script>
-		</p>
+		<div id="respuestas"></div>
 		<input type="button" value="Comprobar">
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
 		</p>
-		<p>
-			<script>document.getElementById("ia").src=imagenes[al];</script>
-		</p>
-		
 	</div>
 	
 
