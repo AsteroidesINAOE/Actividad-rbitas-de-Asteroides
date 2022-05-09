@@ -193,7 +193,7 @@
 	}
 	
 	function comprobar() {
-		var respuesta=$(‘input[type=radio]:checked’).val();
+		var respuesta=$( "input[type=radio][name=cuestionario]:checked" ).val();
 		if (respuesta==grupo) {
 			alert("Respuesta correcta");
 		}else 
