@@ -80,6 +80,12 @@
       padding:0px 0px 0px 30px;
     }
     
+    header{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
     #header_wrap {
       padding:0px;
       margin:0px;
@@ -175,7 +181,26 @@
 		color:black;
 	}
 	
+  .titulo{
+        display: flex;
+        justify-content: center;
+        background:black;
+        color:#066DCC; 
+        font-weight:bold; 
+        padding:33px; 
+        font-size:60px
+    }
 
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .logoimg{
+      display: flex;
+      height: 120px;
+      align-items: center;
+    }
 
 
   </style>  
@@ -186,13 +211,13 @@
 </head>
 <body onload="cambiar()">
 
-  <div id="header_wrap" class"outer">
-    <header clas="inner">
-      <h1 id="project_tittle">
-        <p style="background:black; color:#066DCC; font-weight:bold; padding:25px; text-align:center; font-size:60px; font-family:Raleway">Asteroides Cercanos a la Tierra (NEAs)</p>
-      </h1>
-  </div>
-  <hr color="#02284A" size=3>
+  <header>
+    <h2 class="titulo">
+      Asteroides Cercanos a la Tierra (NEAs)
+    </h2>
+    <img src="img/LOGOINAOE.png" alt="INAOE" class="logoimg">
+  </header>
+  <hr color="#02284A" size=4>
 <div class="container1">
   <div id="header">
     <ul class="nav">
