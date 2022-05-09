@@ -179,13 +179,23 @@
 	
 	var al=Math.floor(Math.random() * imagenes.length);
 	var respuestas_posibles=respuestas[al];
-	console.log(respuestas_posibles);
-	var txt_respuestas="";
+	var posiciones=[1,2];
+	var respuestas_reordenadas=[];
 	
-	for (i in respuestas_posibles){
-		txt_respuestas+='<input type="radio"><label>'+respuestas_posibles[i]+'</label><br>';
+	var respuesta_correcta;
+	for (i in respuestas posibles){
+		var posicion_al=Math.floor(Math.random() * posiciones.length);
+		if (pisicion_al==0){
+			respuesta_correcta=i;	
+		}
+		respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
+		posiciones.splice(posicion_aleatoria, l);
 	}
 	
+	var txt_respuestas="";
+	for (i in respuestas_posibles){
+		txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_posibles[i]+'</label><br>';
+	}
 	
 	function comprobar() {
 		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
@@ -333,7 +343,7 @@
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
 		<div id="respuestas"></div>
 		<p><script>document.getElementById("respuestas").innerHTML=txt_respuestas;</script></p>
-		<input type="button" value="Comprobar">
+		<input type="button" value="Comprobar" onclick="comprobar()">
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
 			<script>document.getElementById("ia").src=imagenes[al];</script>
