@@ -176,16 +176,7 @@
 <script>
 	var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
 	var grupos=["MBA","NEA"]
-	function cuestionario(){
-		var num_al=Math.floor(Math.random() * imagenes.length);
-		function imagen_aleatoria() {
-			var imagen='<img id="ia" src="';
-			imagen += imagenes[num_al];
-			imagen += '" width="500" height="400”/><br><br>'
-			return imagen;
-		}
-	
-		function comprobar() {
+	function comprobar() {
 			var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
 			var grupo=grupos[num_al];
 			if (respuesta==grupo) {
@@ -343,9 +334,7 @@
 		<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
 		<input type="button" value="Comprobar" onclick="imagen_aleatoria()()">
 		<p>
-		<script>
-			document.write(imagen_aleatoria());
-		</script>
+		<img id="ia" src="Ceres.jpg"width="500" height="400”/><br><br>
 		</p>	
 	</div>
 	
