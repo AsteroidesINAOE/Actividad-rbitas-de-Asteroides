@@ -339,6 +339,15 @@ function cambiar(){
 		txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
 	}
 	document.getElementById("respuestas").innerHTML=txt_respuestas;
+	
+	function comprobar(){
+		var respuesta=$("input[type=radio]:checked").val()
+		if (respuesta==respuesta_correcta){
+			alert("Respuesta correcta");
+		}else{
+			alert("Inténtalo de nuevo");
+		}
+	}
 }	
 	
 </script>	
