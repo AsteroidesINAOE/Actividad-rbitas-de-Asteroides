@@ -179,13 +179,13 @@
 	
 	var al=Math.floor(Math.random() * imagenes.length);
 	var respuestas_posibles=respuestas[al];
-	var posiciones=[1,2];
+	var posiciones=[1,2,3,4,5];
 	var respuestas_reordenadas=[];
 	
 	var respuesta_correcta;
 	for (i in respuestas posibles){
 		var posicion_al=Math.floor(Math.random() * posiciones.length);
-		if (pisicion_al==0){
+		if (posicion_al==0){
 			respuesta_correcta=i;	
 		}
 		respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
