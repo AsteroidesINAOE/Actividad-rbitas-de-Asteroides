@@ -178,6 +178,7 @@
 	var grupos=["MBA","NEA"]
 	function imagen_aleatoria() {
 		var num_al=Math.floor(Math.random() * imagenes.length);
+		console.log(num_al);
 		var imagen='<img id="ia" src="';
 		imagen += imagenes[num_al];
 		imagen += '" width="500" height="400”/><br><br>'
@@ -186,7 +187,6 @@
 	
 	function comprobar() {
 		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
-		var num_al=imagen_aleatoria(num_al);
 		var grupo=grupos[num_al];
 		if (respuesta==grupo) {
 			alert("Respuesta correcta");
