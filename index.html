@@ -185,8 +185,6 @@
 		txt_respuestas='<input type="radio"><label>'+respuestas_posibles[i]+'</label><br>';
 	}
 	
-	
-	document.getElementById("ia").src=imagenes[al];
 	document.getElementById("respuestas").innerHTML=txt_respuestas
 	
 	
@@ -339,6 +337,7 @@
 		<input type="button" value="Comprobar">
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
+			<script>document.getElementById("ia").src=imagenes[al];</script>
 		</p>
 	</div>
 	
