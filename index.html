@@ -172,42 +172,10 @@
   </style>  
 	
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-	
-<script>
-var respuesta_correcta;
-var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
-var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
-	
-function cambiar(){	
-	var al=Math.floor(Math.random() * imagenes.length);
-	var respuestas_posibles=respuestas[al];
-	var tengo_la_respuesta=false;
-	var posiciones=[0,1,2,3,4];
-	var respuestas_reordenadas=[];
-	for (i in respuestas_posibles){
-		var posicion_al=Math.floor(Math.random() * posiciones.length);
-		if (posicion_al==0 && tengo_la_respuesta==false){
-			respuesta_correcta=i;
-			tengo_la_respuesta=true;
-		}
-		respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
-		posiciones.splice(posicion_al, 1);
-	}
-	
-	var txt_respuestas="";
-	for (i in respuestas_reordenadas){
-		txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
-	}
-
-}	
-	
-</script>	
-	
-
-	
+		
 	
 </head>
-<body onload="cambiar()">
+<body>
 
   <div id="header_wrap" class"outer">
     <header clas="inner">
@@ -337,15 +305,43 @@ function cambiar(){
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
 		<div id="respuestas"></div>
 		<input type="button" value="Comprobar" onclick="comprobar()">
-		<p><script>document.getElementById("respuestas").innerHTML=txt_respuestas;</script></p>
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
-			<script>document.getElementById("ia").src=imagenes[al];</script>
 		</p>
 	</div>
 	
 
+<script>
+var respuesta_correcta;
+var imagenes=["Ceres.jpg","2001 CP44.jpg"];	
+var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
 	
+function cambiar(){	
+	var al=Math.floor(Math.random() * imagenes.length);
+	var respuestas_posibles=respuestas[al];
+	var tengo_la_respuesta=false;
+	var posiciones=[0,1,2,3,4];
+	var respuestas_reordenadas=[];
+	for (i in respuestas_posibles){
+		var posicion_al=Math.floor(Math.random() * posiciones.length);
+		if (posicion_al==0 && tengo_la_respuesta==false){
+			respuesta_correcta=i;
+			tengo_la_respuesta=true;
+		}
+		respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
+		posiciones.splice(posicion_al, 1);
+	}
+	
+	document.getElementById("ia").src=imagenes[al];
+	
+	var txt_respuestas="";
+	for (i in respuestas_reordenadas){
+		txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
+	}
+	document.getElementById("respuestas").innerHTML=txt_respuestas;
+}	
+	
+</script>	
 	
 	
 	
