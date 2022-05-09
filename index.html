@@ -182,7 +182,6 @@
 	
 	var posiciones=[1,2,3,4,5];
 	var respuestas_reordenadas=[];
-	var ya_tengo_la_respuesta=false;
 	var respuesta_correcta;
 	for (i in respuestas_posibles){
 		var posicion_al=Math.floor(Math.random() * posiciones.length);
@@ -341,7 +340,8 @@
 	<div class="preguntas">
     		<button type="button" onclick="cambiar()">Intentar con un asteroide</button>
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
-		<div id="respuestas"><input type="button" value="Comprobar" onclick="comprobar()"></div>
+		<div id="respuestas"></div>
+		<input type="button" value="Comprobar" onclick="comprobar()">
 		<p><script>document.getElementById("respuestas").innerHTML=txt_respuestas;</script></p>
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
