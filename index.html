@@ -199,8 +199,7 @@
 	
 	function comprobar() {
 		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
-		var grupo=grupos[num_al];
-		if (respuesta==grupo) {
+		if (respuesta==respuesta_correcta) {
 			alert("Respuesta correcta");
 		}else {
 			alert("Respuesta incorrecta");}
@@ -341,9 +340,8 @@
 	<div class="preguntas">
     		<button type="button" onclick="cambiar()">Intentar con un asteroide</button>
 		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
-		<div id="respuestas"></div>
+		<div id="respuestas"><input type="button" value="Comprobar" onclick="comprobar()"></div>
 		<p><script>document.getElementById("respuestas").innerHTML=txt_respuestas;</script></p>
-		<input type="button" value="Comprobar">
 		<p>
 			<img id="ia" src="" height="" width="500" height="400"><br><br>
 			<script>document.getElementById("ia").src=imagenes[al];</script>
