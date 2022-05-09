@@ -183,9 +183,7 @@
 		imagen += imagenes[num_al];
 		imagen += '" width="500" height="400”/><br><br>'
 		return imagen;
-	}
-	
-	function comprobar() {
+		function comprobar() {
 		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
 		var grupo=grupos[num_al];
 		if (respuesta==grupo) {
@@ -194,6 +192,9 @@
 			alert("Respuesta incorrecta");}
 
 	}
+	}
+	
+	
 	
 	function cambiar() {
 		var num_al=Math.floor(Math.random() * imagenes.length);
@@ -342,7 +343,7 @@
 		<input type="radio" value="Troyano" name="cuestionario"><label>Troyano</label><br>
 		<input type="radio" value="MBA" name="cuestionario"><label>MBA</label><br>
 		<input type="radio" value="NEA" name="cuestionario"><label>NEA</label><br>
-		<input type="button" value="Comprobar" onclick="comprobar()">
+		<input type="button" value="Comprobar" onclick="imagen_aleatoria(comprobar())">
 		<p>
 		<script>
 			document.write(imagen_aleatoria());
