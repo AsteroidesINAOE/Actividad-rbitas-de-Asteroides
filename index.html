@@ -186,9 +186,8 @@
 	var respuesta_correcta;
 	for (i in respuestas_posibles){
 		var posicion_al=Math.floor(Math.random() * posiciones.length);
-		if (posicion_al==0 && ya_tengo_la_respuesta==false){
+		if (posicion_al==0){
 			respuesta_correcta=i;
-			ya_tengo_la_respuesta=true;
 		}
 		respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
 		posiciones.splice(posicion_al, 1);
