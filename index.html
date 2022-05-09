@@ -182,16 +182,16 @@
 		var imagen='<img id="ia" src="';
 		imagen += imagenes[num_al];
 		imagen += '" width="500" height="400”/><br><br>'
-		return imagen;
 		function comprobar() {
-		var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
-		var grupo=grupos[num_al];
-		if (respuesta==grupo) {
-			alert("Respuesta correcta");
-		}else {
-			alert("Respuesta incorrecta");}
+			var respuesta= $( "input[type=radio][name=cuestionario]:checked" ).val();
+			var grupo=grupos[num_al];
+			if (respuesta==grupo) {
+				alert("Respuesta correcta");
+			}else {
+				alert("Respuesta incorrecta");}
 
-	}
+		}
+		return imagen;
 	}
 	
 	
