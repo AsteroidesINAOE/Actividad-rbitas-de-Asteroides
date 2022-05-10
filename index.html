@@ -327,7 +327,7 @@
 
 <div class="capa"><a name="indice2"></a></div>
 <h2>¿Dónde se encuentra este asteroide?<br><br></h2>
-	<p>Ahora que ya conoce más acerca de como se agrupan los asteroides en base a sus órbitas, a continuación se presentan algunas imágenes de las órbitas de algunos asteroides interesantes, elija la respuesta correcta para poder ver datos interesantes. Compruebe usted mismo si el asteroide que observa podrá ser observado desde la Tierra de manera sencilla o si podría llegar a colisionar con la Tierra.<br><br></p> 
+	<p>Ahora que ya conoce más acerca de como se agrupan los asteroides en base a sus órbitas, a continuación se presentan algunas imágenes de las órbitas de algunos asteroides interesantes, elija la respuesta correcta para poder ver datos interesantes.<br><br></p> 
 	
 	<div class="preguntas">
 		<p><br><br></p>
@@ -345,6 +345,7 @@
   var respuesta_correcta;
   var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg"];	
   var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
+  var datos=["Este asteroide es especial pr ser el primero en ser descubierto.","A este tipo de asteroides se les llama Mars-crossing pues su órbita coincide con la de Marte, atravesándola."]
     
   function cambiar(){	
     var al=Math.floor(Math.random() * imagenes.length);
@@ -374,7 +375,7 @@
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
-      alert("Respuesta correcta");
+      alert('"Respuesta correcta<br>"'+datos[al]);
     }else{
       alert("Inténtalo de nuevo");
     }
