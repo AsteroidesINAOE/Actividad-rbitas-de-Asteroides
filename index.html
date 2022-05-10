@@ -339,7 +339,6 @@
 			<img id="ia" src="" width="500" height="400"><br><br>
 		</p>
 		<div>
-			<p style="font_color=black">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br></p>
 			<p id="saber_mas"></p>
 		</div>
 	</div>
@@ -348,6 +347,7 @@
   <script>
   var respuesta_correcta;
   var dato_interesante;
+  var al;
   var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg","img/1468 Zomba (1938 PA).jpg"];	
   var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"],["MBA","TNO","Centauro","Troyano","NEA"]];	
   var datos=["Este asteroide es especial por haber sido el primero en ser descubierto.",
@@ -375,7 +375,6 @@
     }
     
     document.getElementById("ia").src=imagenes[al];
-    var url='<a href="'+urls[al]+'">'+urls[al]+'</a><br><br>'
     
     var txt_respuestas="";
     for (i in respuestas_reordenadas){
@@ -384,6 +383,7 @@
     document.getElementById("respuestas").innerHTML=txt_respuestas;
   }	
     
+  var url='<p style="font_color=black;">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br></p><a href="'+urls[al]+'">'+urls[al]+'</a><br><br>'
 	  
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
