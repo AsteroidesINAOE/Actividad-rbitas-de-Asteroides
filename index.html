@@ -349,9 +349,9 @@
   var datos=["Este asteroide es especial por ser el primero en ser descubierto.","A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
     
   function cambiar(){	
-    var dato_interesante;
     var al=Math.floor(Math.random() * imagenes.length);
     var respuestas_posibles=respuestas[al];
+    dato_interesante=datos[al];
     var tengo_la_respuesta=false;
     var posiciones=[0,1,2,3,4];
     var respuestas_reordenadas=[];
@@ -359,7 +359,6 @@
       var posicion_al=Math.floor(Math.random() * posiciones.length);
       if (posicion_al==0 && tengo_la_respuesta==false){
         respuesta_correcta=i;
-	dato_interesante=datos[i];
         tengo_la_respuesta=true;
       }
       respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
