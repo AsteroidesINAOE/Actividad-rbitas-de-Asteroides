@@ -338,7 +338,7 @@
 		<p>
 			<img id="ia" src="" width="500" height="400"><br><br>
 		</p>
-		<div id="saber_mas"><p></p></div>
+		<div id="saber_mas"></div>
 	</div>
 	
 
@@ -372,9 +372,9 @@
     }
     
     document.getElementById("ia").src=imagenes[al];
-    var url="Para saber más de este asteroide puede visitar el siguiente sitio: "
-    url+=urls[al]
-    url+="<br><br>
+    var url=<p>+'"Para saber más de este asteroide puede visitar el siguiente sitio: "'
+    url+='<a href="'+urls[al]+'"></a>'
+    url+='"'+<br><br></p>
     document.getElementById("saber_mas").innerHTML=url;
     
     var txt_respuestas="";
