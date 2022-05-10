@@ -320,7 +320,7 @@
 </table><br><br>
   </p>
   <p>
-    Hay otra familia de asteroides muy importantes dentro del grupo de los NEAs, y es llamado <b>Asteroides Potencialmente Peligrosos (PHA's)</b>. Estos asteroides se caracterizan porque la <i>Distancia Mínima de Intersección de la Órbita</i> con la Tierra es de 0.05 AU o menor, y porque tienen una <b>magnitud absoluta</b> (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.<br><br>
+    Hay otra clase de asteroides muy importantes dentro del grupo de los NEAs, y es llamado <b>Asteroides Potencialmente Peligrosos (PHA's)</b>. Estos asteroides se caracterizan porque la <i>Distancia Mínima de Intersección de la Órbita</i> con la Tierra es de 0.05 AU o menor, y porque tienen una <b>magnitud absoluta</b> (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.<br><br>
     Ahora que ya conoces sobre las órbitas de los asteroides, ¿te gustaría identificar a qué grupo y/o familia pertenecen? Si es así, te invitamos a revisar la siguiente actividad.<br><br>
   </p>
       
@@ -338,15 +338,21 @@
 		<p>
 			<img id="ia" src="" width="500" height="400"><br><br>
 		</p>
+		<div id="saber_mas"></div>
 	</div>
 	
 
   <script>
   var respuesta_correcta;
   var dato_interesante;
-  var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg"];	
-  var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
-  var datos=["Este asteroide es especial por ser el primero en ser descubierto.","A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
+  var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg","img/1468 Zomba (1938 PA).jpg"];	
+  var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"],["MBA","TNO","Centauro","Troyano","NEA"]];	
+  var datos=["Este asteroide es especial por haber sido el primero en ser descubierto.",
+	     "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
+	    "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
+  var urls=["https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=ceres",
+	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2001%20CP44",
+	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=1938%20PA"]
     
   function cambiar(){	
     var al=Math.floor(Math.random() * imagenes.length);
@@ -366,14 +372,19 @@
     }
     
     document.getElementById("ia").src=imagenes[al];
+    var url="Para saber más de este asteroide puede visitar el siguiente sitio: "
+    url+=urls[al]
+    document.getElementById("saber_mas").innerHTML=url;
     
     var txt_respuestas="";
     for (i in respuestas_reordenadas){
-      txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
+	      txt_respuestas+='<input type="radio" name="cuestionario" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
+      }
     }
     document.getElementById("respuestas").innerHTML=txt_respuestas;
   }	
     
+	  
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
