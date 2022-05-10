@@ -14,6 +14,10 @@
 	    padding:20px 0px 20px 0px;
     }
 
+    .saber_mass {
+	    color:black;
+    }
+	
     label {
 	    color:black;
 	    font-family:Raleway;
@@ -338,9 +342,7 @@
 		<p>
 			<img id="ia" src="" width="500" height="400"><br><br>
 		</p>
-		<div>
-			<p id="saber_mas"></p>
-		</div>
+		<div id="saber_mas"></div>
 	</div>
 	
 
@@ -383,13 +385,14 @@
     document.getElementById("respuestas").innerHTML=txt_respuestas;
   }	
     
-  var url='<p class="button">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br></p><a href="'+urls[al]+'">'+urls[al]+'</a><br><br>';
+  var url_ast='<p class="saber_mass">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br></p><a target="_blank" href="'+urls[al]+'">'+urls[al]+'</a><br><br>';
+	  console.log(url_ast)
 	  
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
       alert('"Respuesta correcta. "'+dato_interesante);
-      document.getElementById("saber_mas").innerHTML=url;
+      document.getElementById("saber_mas").innerHTML=url_ast;
     }else{
       alert("Inténtalo de nuevo");
     }
