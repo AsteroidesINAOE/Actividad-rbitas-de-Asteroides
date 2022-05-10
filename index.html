@@ -14,10 +14,6 @@
 	    padding:20px 0px 20px 0px;
     }
 
-    .saber_mass {
-	    color:black;
-    }
-	
     label {
 	    color:black;
 	    font-family:Raleway;
@@ -336,28 +332,23 @@
 	<div class="preguntas">
 		<p><br><br></p>
     		<button type="button" onclick="cambiar()">Intentar con otro asteroide</button>
-		<h3 style="color:black; padding:20px">¿A qué grupo y familia, si es el caso, pertenece el asteroide?</h3>
+		<h3 style="color:black; padding:20px">¿A qué grupo pertenece el siguiente asteroide?</h3>
 		<div id="respuestas"></div>
 		<input type="button" value="Comprobar" onclick="comprobar()"><br><br>
 		<p>
 			<img id="ia" src="" width="500" height="400"><br><br>
 		</p>
-		<div id="saber_mas"></div>
 	</div>
 
 	
 <script>
   var respuesta_correcta;
   var dato_interesante;
-  var al;
   var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg","img/1468 Zomba (1938 PA).jpg"];	
   var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"],["MBA","TNO","Centauro","Troyano","NEA"]];	
   var datos=["Este asteroide es especial por haber sido el primero en ser descubierto.",
 	     "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
 	    "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
-  var direcciones=["https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=ceres",
-	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2001%20CP44",
-	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=1938%20PA"]
     
   function cambiar(){	
     var al=Math.floor(Math.random() * imagenes.length);
@@ -384,14 +375,11 @@
       }
     document.getElementById("respuestas").innerHTML=txt_respuestas;
   }	
-    
-  var url='<p class="saber_mass">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br><a target="_blank" href="'+direcciones[al]+'">'+direcciones[al]+'</a><br><br></p>';
-	  
+      
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
       alert('"Respuesta correcta. "'+dato_interesante);
-      document.getElementById("saber_mas").innerHTML=url;
     }else{
       alert("Inténtalo de nuevo");
     }
