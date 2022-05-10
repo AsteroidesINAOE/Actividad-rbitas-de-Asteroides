@@ -344,9 +344,9 @@
 		</p>
 		<div id="saber_mas"></div>
 	</div>
-	
 
-  <script>
+	
+<script>
   var respuesta_correcta;
   var dato_interesante;
   var al;
@@ -355,7 +355,7 @@
   var datos=["Este asteroide es especial por haber sido el primero en ser descubierto.",
 	     "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
 	    "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
-  var urls=["https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=ceres",
+  var direcciones=["https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=ceres",
 	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2001%20CP44",
 	    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=1938%20PA"]
     
@@ -385,14 +385,13 @@
     document.getElementById("respuestas").innerHTML=txt_respuestas;
   }	
     
-  var url_ast='<p class="saber_mass">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br></p><a target="_blank" href="'+urls[al]+'">'+urls[al]+'</a><br><br>';
-	  console.log(url_ast)
+  var url='<p class="saber_mass">Para saber más de este asteroide puede visitar el siguiente sitio: <br><br><a target="_blank" href="'+direcciones[al]+'">'+direcciones[al]+'</a><br><br></p>';
 	  
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
       alert('"Respuesta correcta. "'+dato_interesante);
-      document.getElementById("saber_mas").innerHTML=url_ast;
+      document.getElementById("saber_mas").innerHTML=url;
     }else{
       alert("Inténtalo de nuevo");
     }
