@@ -320,7 +320,7 @@
 </table><br><br>
   </p>
   <p>
-    Hay otra clase de asteroides muy importantes dentro del grupo de los NEAs, y es llamado <b>Asteroides Potencialmente Peligrosos (PHA's)</b>. Estos asteroides se caracterizan porque la <i>Distancia Mínima de Intersección de la Órbita</i> con la Tierra es de 0.05 AU o menor, y porque tienen una <b>magnitud absoluta</b> (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.<br><br>
+    Hay otra clase de asteroides muy importantes dentro del grupo de los NEAs, y es llamado <b>Asteroides Potencialmente Peligrosos (PHAs)</b>. Estos asteroides se caracterizan porque la <i>Distancia Mínima de Intersección de la Órbita (MOID)</i> con la Tierra es de 0.05 AU o menor, y porque tienen una <b>magnitud absoluta</b> (brillo) de 22 o menor. Estos son los asteroides que verdaderamente tienen una posibilidad alta de impactar con la Tierra. Por ello los científicos los monitorean con especial atención.<br><br>
     Ahora que ya conoces sobre las órbitas de los asteroides, ¿te gustaría identificar a qué grupo y/o familia pertenecen? Si es así, te invitamos a revisar la siguiente actividad.<br><br>
   </p>
       
@@ -344,11 +344,12 @@
 <script>
   var respuesta_correcta;
   var dato_interesante;
-  var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg","img/1468 Zomba (1938 PA).jpg"];	
-  var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"],["MBA","TNO","Centauro","Troyano","NEA"]];	
+  var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg","img/1468 Zomba (1938 PA).jpg","img/2020 UX3.jpg"];	
+  var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"],["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
   var datos=["Este asteroide es especial por haber sido el primero en ser descubierto.",
 	     "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
-	    "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte."]
+	    "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
+	    "Por tener un MOID=0.0318381 AU, este asteroide es un PHA, por lo que está en constante monitoreo por los científicos."]
     
   function cambiar(){	
     var al=Math.floor(Math.random() * imagenes.length);
