@@ -343,6 +343,7 @@
 
   <script>
   var respuesta_correcta;
+  var dato_interesante;
   var imagenes=["img/Ceres.jpg","img/2001 CP44.jpg"];	
   var respuestas=[["MBA","TNO","Centauro","Troyano","NEA"],["NEA","TNO","Centauro","Troyano","MBA"]];	
   var datos=["Este asteroide es especial pr ser el primero en ser descubierto.","A este tipo de asteroides se les llama Mars-crossing pues su órbita coincide con la de Marte, atravesándola."]
@@ -357,6 +358,7 @@
       var posicion_al=Math.floor(Math.random() * posiciones.length);
       if (posicion_al==0 && tengo_la_respuesta==false){
         respuesta_correcta=i;
+	dato_interesante=datos[i];
         tengo_la_respuesta=true;
       }
       respuestas_reordenadas[i]=respuestas_posibles[posiciones[posicion_al]];
@@ -375,7 +377,7 @@
   function comprobar(){
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
-      alert('"Respuesta correcta<br>"'+datos[al]);
+      alert('"Respuesta correcta<br>"'+dato_interesante);
     }else{
       alert("Inténtalo de nuevo");
     }
