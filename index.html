@@ -375,7 +375,7 @@
     }
     
     document.getElementById("ia").src=imagenes[al];
-    
+    var url='<a href="'+urls[al]+'">'+urls[al]+'</a><br><br>'
     
     var txt_respuestas="";
     for (i in respuestas_reordenadas){
@@ -389,7 +389,6 @@
     var respuesta=$("input[type=radio]:checked").val()
     if (respuesta==respuesta_correcta){
       alert('"Respuesta correcta. "'+dato_interesante);
-      var url='<a href="'+urls[al]+'">'+imagenes[al]+'</a><br><br>'
       document.getElementById("saber_mas").innerHTML=url;
     }else{
       alert("Inténtalo de nuevo");
