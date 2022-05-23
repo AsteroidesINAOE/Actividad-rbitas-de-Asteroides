@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,13 +9,28 @@
       margin: 0px;
       font-family: Raleway;
     }
-
-    .button {
-      padding: 20px 0px 20px 0px;
+    
+    <!-- Menú -->
+    .container1 {
+      display: flex;
+      flex-flow: column;
+    }
+    
+    header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
 
+
+    
+    
     table {
-      border:white;
+      color: white;
+    }
+    
+    .button {
+      padding: 20px 0px 20px 0px;
     }
     
     label {
@@ -29,18 +43,21 @@
       margin: 20px 20px 20px 10px;
       border-radius: 1rem;
       padding: 0 20px 0 20px;
-      box-shadow: -0.5px -0.5px 10px white;
+      box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+    }
+    
+    .listas,
+    .numeracion {
+      padding:0 20px 0 20px;
+      text-align: justify;
+    }
+    
+    .actividades {
+      font-size: 25px;
+      padding-left: 30px;
     }
 
-    table {
-      color: white;
-    }
-
-    .container1 {
-      display: flex;
-      flex-flow: column;
-    }
-
+    
     .container2 {
       display: flex;
       flex-flow: row;
@@ -59,56 +76,35 @@
 
     p {
       padding: 0px 0px 0px 25px;
+      text-align: justify;
     }
 
     h2 {
       text-align: center;
       padding: 0px 0px 0px 0px;
       font-size: 40px;
-      width: 90%;
     }
 
     h3 {
       padding: 0px 0px 0px 0px;
-      font-size: 40px;
+      font-size: 30px;
     }
 
     h4 {
-      padding: 0px 0px 0px 0px;
-      font-size: 16px;
+      padding: 0;
+      font-size: 20px;
     }
 
     body {
       background-color: black;
     }
-
-    ul.listas,
-    ol {
-      font-family: Raleway;
-      padding: 0px 0px 0px 30px;
-    }
-
-    ol ol {
-      font-family: Raleway;
-      padding: 0px 0px 0px 30px;
-    }
-
-    header {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    #header_wrap {
-      padding: 0px;
+    
+     #header_wrap2 {
+      justify-items: center;
+      align-items: flex-end;
       margin: 0px;
     }
-
-    #header_wrap2 {
-      padding: 30px 0px 0px;
-      margin: 0px;
-    }
-
+    
     #header {
       padding: 0px 0px 30px 0px;
       margin: auto;
@@ -120,6 +116,17 @@
       top: 0px;
       background: #02284A;
       z-index: 3;
+    }
+
+    ul.listas,
+    ol {
+      font-family: Raleway;
+      padding: 0px 0px 0px 30px;
+    }
+
+    ol ol {
+      font-family: Raleway;
+      padding: 0px 0px 0px 30px;
     }
 
     ul.nav,
@@ -158,7 +165,7 @@
       background: #54ABFA;
       margin: 50px 10px 0 10px;
       width: 35%;
-      height: 80%;
+      height: 100%;
       padding: 20px 60px 20px 20px;
       border-radius: 3px;
       position: sticky;
@@ -180,19 +187,9 @@
     .indice .indice_lista {
       padding: 0 0 0 30px;
     }
-
-    .preguntas {
-      background: white;
-      width: 80%;
-      height: auto;
-      border-radius: 4px;
-      text-align: center;
-    }
-
-    form {
-      color: black;
-    }
-
+    
+    
+    
     .titulo {
       display: flex;
       justify-content: center;
