@@ -3,7 +3,7 @@
 <head>
   <title>Actividad: Órbitas</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-
+<script src="https://code.jquery.com/jquery.js"></script>
   <style type="text/css">
     * {
       margin: 0;
@@ -497,7 +497,7 @@
             }
 
             function comprobar() {
-              var respuesta = ("input[type=radio]:checked").val()
+              var respuesta = $("input[type=radio]:checked").val()
               if (respuesta == respuesta_correcta) {
                 alert('Respuesta correcta. ' + dato_interesante);
               } else {
