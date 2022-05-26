@@ -557,10 +557,10 @@
               <h3 style="color:black; padding:20px">¿A qué grupo pertenece el siguiente asteroide?</h3>
               <div id="respuestas"></div>
               <input type="button" value="Comprobar"><p><br><br></p>
-                <img id="ia" src="" width="500" height="400" onclick="scale(1)"><br><br>
+                <img id="ia" src="" width="500" height="400" onclick="mostrar()"><br><br>
               <div id="myModal" class="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
+  <img class="modal-content" id="ia">
   <div id="caption"></div>
 </div>
             </div>
@@ -620,9 +620,9 @@
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
+var modalImg = document.getElementById("ia");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
+function mostrar(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
