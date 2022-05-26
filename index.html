@@ -31,7 +31,7 @@
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content{  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -545,7 +545,7 @@
               <h3 style="color:black; padding:20px">¿A qué grupo pertenece el siguiente asteroide?</h3>
               <div id="respuestas"></div>
               <input type="button" value="Comprobar"><p><br><br></p>
-                <img id="ia" src="" width="500" height="400" onclick="mostrar()"><br><br>
+                <img id="ia" src="" width="500" height="400"><br><br>
               <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img">
@@ -608,7 +608,7 @@
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById("ia");
 var modalImg = document.getElementById("img");
-function mostrar(){
+img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
 }
