@@ -237,6 +237,7 @@
 
     .preguntas {
       background-image: url("img/1_orbital-diagram.width-1320.jpg");
+      background-size:100%;
       width: 80%;
       height: auto;
       border-radius: 4px;
