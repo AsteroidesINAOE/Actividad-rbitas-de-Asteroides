@@ -231,13 +231,13 @@
     }
 
     label {
-      color: black;
+      color: white;
       font-family: Raleway;
     }
 
     .preguntas {
       background-image: url("img/1_orbital-diagram.width-1320.jpg");
-      background-size:100%;
+      background-size:60%;
       width: 80%;
       height: auto;
       border-radius: 4px;
