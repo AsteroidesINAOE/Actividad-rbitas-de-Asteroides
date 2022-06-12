@@ -1,3 +1,4 @@
+/*Partes principales */
 *{
   margin: 0;
   padding: 0;
@@ -67,7 +68,7 @@ nav ul li{
   list-style: none;
   position: relative;
 }
-    
+
 /*ICONO HOME*/
 nav > ul > li:first-child > a{
   background-image: url(../img/home.png);
@@ -283,7 +284,7 @@ nav ul li ul li a:hover{
       padding: 0px 0px 0px 30px;
     }
 
-    /* Actividad diáctica */
+    /* Actividad didáctica */
     button, input {
       padding: 20px 0px 20px 0px;
       text-decoration: none;
