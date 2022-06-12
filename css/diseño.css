@@ -245,8 +245,6 @@ nav ul li ul li a:hover{
       color: white;
     }
 
-
-
     /* Listas o numeración */
     .listas,
     .numeracion {
@@ -264,8 +262,6 @@ nav ul li ul li a:hover{
       font-family: Raleway;
       padding: 0px 0px 0px 30px;
     }
-
-
 
     /* Actividad diáctica */
     button, input {
