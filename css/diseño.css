@@ -400,6 +400,10 @@ nav ul li ul li a:hover{
       .modal-content {
         width: 100%;
       }
+
+      .container2{
+        visibility: none;
+      }
     }
 
     /* Pie de página */
