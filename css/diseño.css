@@ -176,6 +176,7 @@ nav ul li ul li a:hover{
     .container2 {
       display: flex;
       flex-flow: row;
+      visibility: visible;
     }
 
     .indice {
@@ -416,13 +417,16 @@ nav ul li ul li a:hover{
         opacity: 1;
     } 
 
-      .modal-content {
-        width: 100%;
-      }
+    /*Submenu*/
+    .container2{
+      display: flex;
+      flex-flow: row;
+      visibility: none;
+    }
 
-      .container2{
-        visibility: none;
-      }
+    .modal-content {
+      width: 100%;
+    }
     }
 
     /* Pie de página */
