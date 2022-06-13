@@ -385,7 +385,7 @@ nav ul li ul li a:hover{
         position: sticky;
         left: 0;
         top: 158px;
-        width: 100%;
+        width: 20%;
         height: 0px;
         transition: all 300ms ease;
         z-index: 100;
@@ -429,6 +429,11 @@ nav ul li ul li a:hover{
     .modal-content {
       width: 100%;
     }
+      
+    .indice {
+      display:none;
+    }
+      
     }
 
     /* Pie de página */
