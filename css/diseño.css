@@ -50,6 +50,7 @@ header{
   top: 0;
   background: #023877;
   padding: 0px 25px;
+  z-index:3;
 }
 .menu{
   max-width: 1200px;
@@ -365,7 +366,7 @@ nav ul li ul li a:hover{
       cursor: pointer;
     }
 
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: 800px){
       .parte_superior{
         padding: 10px;
     }
